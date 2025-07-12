@@ -65,7 +65,7 @@ describe("Create statement", () => {
     }).rejects.toBeInstanceOf(CreateStatementError.InsufficientFunds);
   });
 
-  it("should not be able to create a new statement if user id does not exist", async () => {
+  it("should not be able to create a new statement if user does not exist", async () => {
     expect(async () => {
       await createStatementUseCase.execute({
         user_id: "nonExistentId",
